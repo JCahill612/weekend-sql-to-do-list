@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <!-- <link rel="stylesheet" href="./vendors/bootstrap.min.css"/> -->
+    <script src="./vendors/jquery.min.js"></script>
+    <script src="./scripts/client.js"></script>
+    <title>Weekend SQL To Do List</title>
+</head>
+<body>
+    <header>
+        <h1>Weekend Task List</h1>
+    </header>
+    <section>
+        <h3>New Task</h3>
+        <form>
+            <label>Add a Task: </label>
+            <input id="task-in" type="text" placeholder="Description"/>
+            <button id="submitBtn">Submit</button>
+        </form>
+    </section>
+    <section>
+        <table id="displayArea">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Completed</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+
+            </tbody>
+        </table>
+    </section>
+    
+</body>
+</html>
