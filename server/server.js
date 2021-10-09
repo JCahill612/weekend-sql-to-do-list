@@ -1,26 +1,17 @@
-// requires
-const express = require( 'express' );
+const express = require('express');
+const bodyParser = require('body-parser');
+const taskRouter = require('./routes/tasks.router');
+
 const app = express();
-const bodyParser = require( 'body-parser' );
-// must require modules to use 'em
-const pool = require( './modules/pool' );
-// uses
-app.use( express.static( 'server/public' ) );
-app.use( bodyParser.urlencoded( { extended: true } ) );
-// globals
-const port = 5000;
-// spin up server
-app.listen( port, ()=>{
-    console.log( 'server is up on:', port );
-})
-// routes
-app.get( '/', ( req, res )=>{
-    console.log( 'get route hit' );
-    res.send( 'meow' );
-})
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.get( '/counter', ( req, res )=>{
-    console.log( '/counter GET hit' );
-    res.send( 'woof' );
-})
+app.use('/tasks', taskRouter);
 
+// Serve back static files by default
+app.use(express.static('server/public'))
+
+// Start listening for requests on a specific port
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log('listening on port', PORT);
+});
