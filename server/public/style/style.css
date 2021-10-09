@@ -1,3 +1,27 @@
 body{
     background-color: aquamarine;
 }
+table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+  }
+th {
+    text-align: left;
+}
+
+.info {
+    text-align: left;
+}
+
+td {
+    text-align: center;
+}
+
+#displayArea {
+    margin-top: 50px;
+    margin-left: 15px;
+}
+
+.complete {
+    background-color: rgb(8, 49, 29);
+}

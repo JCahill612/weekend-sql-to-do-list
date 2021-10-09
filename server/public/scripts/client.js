@@ -70,6 +70,10 @@ function handleSubmit(event) {
     addTask(newTask);
 }
 
+function toggleComplete(row) {
+    row.toggleClass('complete');
+}
+
 function completeTask(idToComplete) {
     console.log('completing task with id:', idToComplete);
     $.ajax({
@@ -83,10 +87,8 @@ function completeTask(idToComplete) {
         console.log('ERROR', err);
         alert('Unable to complete task, please try again later.');
       });
-}
-function toggleComplete(row) {
-    row.toggleClass('complete');
-}
+
+    }
 
 
 // called after clicking delete button, removes a task from database and refreshes DOM
