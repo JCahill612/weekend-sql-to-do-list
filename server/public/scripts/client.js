@@ -1,18 +1,17 @@
 $(document).ready(onReady);
 
-// function to call jquery, establish click handlers, and get taskList on page load
 function onReady() {
   console.log("JQ");
- // Establish Click Listeners
+ //Click Listeners
   setupClickListeners();
-  //load tasks from database
+  //get tasks from database
   getTasks();
   clearInput();
-   //status listener
+   //change status
    $("table").on("click", "#checkbox", changeStatusHandler);
-   //delete listener
+   //delete
    $("#viewTasks").on("click", "button#deleteButton", deleteTaskHandler);
- } // end doc ready
+ } // end onReady
  
  function setupClickListeners() {
    $("#submitTask").on("click", function () {
@@ -28,7 +27,7 @@ function onReady() {
      addTask(taskToSend);
      clearInput();
    });
- }
+ } //end setupClickListeners
  
  //POST Ajax call
  function addTask(taskToSend) {
@@ -46,7 +45,7 @@ function onReady() {
  
  function clearInput() {
    $("#toDoItem").val("");
- }
+ }// end addTask
 
  //GET
  function getTasks() {
@@ -96,7 +95,7 @@ function onReady() {
          //     </tr>`);
      }
    }
- } //end render
+ } //end showTaskInfo
  
  //DELETE Handler
  function deleteTaskHandler() {
@@ -114,7 +113,7 @@ function onReady() {
      }).catch((error) => {
        alert(`There was a problem deleting ${taskId}. Please try again.`);
      });
- }
+ }//end deleteTask
  
  function changeStatusHandler() {
    changeStatus($(this).data("id"));
@@ -132,4 +131,4 @@ function onReady() {
      }).catch((error) => {
        alert("Something went wrong", error);
      });
- }
+ }// end changeStatus
