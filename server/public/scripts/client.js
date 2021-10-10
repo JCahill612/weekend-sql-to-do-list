@@ -8,9 +8,9 @@ function onReady() {
   getTasks();
   clearInput();
    //change status
-   $("table").on("click", "#checkbox", changeStatusHandler);
+   $("table").on("click", "#checkbox", changeTaskStatus);
    //delete
-   $("#viewTasks").on("click", "button#deleteButton", deleteTaskHandler);
+   $("#viewTasks").on("click", "button#deleteButton", deleteThisTask);
  } // end onReady
  
  function setupClickListeners() {
@@ -41,11 +41,11 @@ function onReady() {
      clearInput();
      getTasks();
    });
- }
+ }// end addTask
  
  function clearInput() {
    $("#toDoItem").val("");
- }// end addTask
+ }// end clearInput
 
  //GET
  function getTasks() {
@@ -97,8 +97,8 @@ function onReady() {
    }
  } //end showTaskInfo
  
- //DELETE Handler
- function deleteTaskHandler() {
+ //DELETE 
+ function deleteThisTask() {
    deleteTask($(this).data("id"));
  } //end delete handler
  
@@ -115,7 +115,7 @@ function onReady() {
      });
  }//end deleteTask
  
- function changeStatusHandler() {
+ function changeTaskStatus() {
    changeStatus($(this).data("id"));
  }
  
