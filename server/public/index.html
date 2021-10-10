@@ -9,31 +9,35 @@
     <title>Weekend SQL To Do List</title>
 </head>
 <body>
-    <header>
-        <h1>Weekend Task List</h1>
-    </header>
-    <section>
-        <h3>New Task</h3>
-        <form>
-            <label>Add a Task: </label>
-            <input id="task-in" type="text" placeholder="Description"/>
-            <button id="submitBtn">Submit</button>
-        </form>
-    </section>
-    <section>
-        <table id="displayArea">
-            <thead>
-                <tr>
-                    <th scope="col">Task</th>
-                    <th scope="col">Completed</th>
-                    <th scope="col">Delete</th>
-                </tr>
-            </thead>
-            <tbody id="taskList">
+<header>
+  <h1>Weekend Task List</h1>
+</header>
+  <body>
+    <main>
+      <section id="addTask"></section>
+      <label for="toDoItem">
+        <input id="toDoItem" type="text" placeholder="Make your to do list..." />
+      </label>
 
-            </tbody>
+      <button type="button" id="submitTask">Add Task</button>
+
+      <table id="taskTable"></table>
+      <section>
+        <h2>Tasks:</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Complete</th>
+              <th>Task</th>
+              <th></th>
+              <th></th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="viewTasks"></tbody>
         </table>
-    </section>
-    
-</body>
+      </section>
+      <footer></footer>
+    </main>
+  </body>
 </html>

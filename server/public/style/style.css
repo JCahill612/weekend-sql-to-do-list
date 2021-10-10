@@ -1,27 +1,76 @@
 body{
-    background-color: aquamarine;
+    background-color: rgb(194, 189, 216);
 }
-table, th, td {
-    border: 3px solid black;
-    border-collapse: collapse;
-  }
-th {
-    text-align: left;
+h1{
+    font-family: fantasy, cursive;;
 }
 
-.info {
-    text-align: left;
+#deleteButton{
+    background-color: rgb(204, 122, 241);
+    font-family: fantasy, cursive; 
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 4px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 3px 5px #888888;
 }
+
+#done{
+    text-decoration: line-through;
+    background-image: linear-gradient(to right, #cdb6f1 0%, #6b3ed3 100%);
+    border-radius: 25px;
+    background-position: left top;
+    background-repeat: repeat;
+
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+  }
 
 td {
+    width:auto;
     text-align: center;
+    padding: 5px;
+  }
+
+th{
+    width: auto;
+    text-align: center;
+    padding: 5px;
 }
 
-#displayArea {
-    margin-top: 50px;
-    margin-left: 15px;
+#check{
+    width: 25px;
 }
 
-.complete {
-    background-color: rgb(8, 49, 29);
+#checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+input{
+        height:30px;
+        width: 200px;
+        font-size:14pt;
+        border-radius: 10px;
+
+}
+
+#submitTask{
+    border-radius: 10px;
+    font-size: 14pt;
+    height: 30px;
+    background-color:rgb(147, 123, 212);
+    font-family: fantasy, cursive; 
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 4px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 3px 5px #888888;
+
+}
+h2{
+    background-color: rgb(168, 135, 194);
 }
