@@ -59,8 +59,8 @@ function onReady() {
        console.log("in getTasks", response);
        //append Tasks to DOM
        showTaskInfo(response);
-     }).catch((error) => {
-       console.log("error showing tasks", error);
+     }).catch((err) => {
+       console.log("error showing tasks", err);
      });
  } //end getTasks
  
@@ -110,7 +110,7 @@ function onReady() {
    }).then((response) => {
        console.log(`Deleting task`);
        getTasks(); // function to GET and display tasks
-     }).catch((error) => {
+     }).catch((err) => {
        alert(`There was a problem deleting ${taskId}. Please try again.`);
      });
  }//end deleteTask
@@ -126,9 +126,8 @@ function onReady() {
      url: `/tasks/${taskId}`,
    }).then((response) => {
        console.log("Task status change:", response);
-       alert('You completed your task! Way to go!!!');
        getTasks(); //update display
-     }).catch((error) => {
-       alert("Something went wrong", error);
+     }).catch((err) => {
+       alert("Something went wrong", err);
      });
  }// end changeStatus
